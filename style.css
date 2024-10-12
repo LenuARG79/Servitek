@@ -11,7 +11,8 @@
     font-size: 40px;
     right: 25px;
     bottom: 60px;
-    z-index: 4;
+    z-index: 100;
+    background-color: white;
 }
 
 .whatsapp-mobil {
@@ -21,42 +22,54 @@
     font-size: 40px;
     right: 25px;
     bottom: 60px;
+    z-index: 100;
+    background-color: white;
 }
-
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
 .contenedor-header {
-    width: 100vw;
-    height: 40px;
+    width: 100%;
+    height: 7vh;
     background-color: #539893;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2vw;
 }
 
 .texto-header {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    text-align: center;
-    align-items: center;
-    font-weight: 600;
-    padding-top: 8px;
+    font-size: clamp(10px, 2vw, 14px);
+    margin-top: 2vh;
+    margin: 0 5vw;
+    /*text-align: center;
+    align-items: center;*/
+    font-weight: 500;
+    /*padding-top: 8px;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px;*/
 }
 
 .contenedor-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    position: fixed;
+    /*padding: 0 20px;*/
     width: 100%;
+    height: 12vh;
     background-color: white;
-    z-index: 10;
-    height: 80px;
-    border-bottom: 1px solid lightgray;
+    padding: 0 6vw;
+    /*border-bottom: 1px solid lightgray;*/
 }
 
 .logo_servitek {
-    margin-left: 5px;
-    width: 95px;
-    flex-shrink: 0;
+    width: clamp(110px, 5%, 130px);
+    height: auto;
 }
 
 .redes-sociales {
@@ -69,8 +82,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 30px;
-    height: 25px;
+    width: 28px;
+    height: 18px;
     transition: transform 0.5s ease;
 }
 
@@ -80,13 +93,13 @@
 
 .hamburger .line {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #47716F;
     transition: all 0.5s ease;
 }
 
 .hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 3px);
 }
 
 .hamburger.active .line:nth-child(2) {
@@ -99,7 +112,7 @@
 
 #menu {
     position: fixed;
-    top: 120px;
+    top: 19vh;
     left: -100%;
     width: 100%;
     height: 100%;
@@ -132,83 +145,79 @@
 }
 
 /* Fin Menu Hamburguesa */
+
 /* Menu PC */
 #menu-pc {
     display: none;
 }
 /* Fin Menu PC */
 
+.carousel {
+    height: 100vh;
+    margin-top: 19vh; 
+}
+
+.carousel-item {
+    height: 100vh; 
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
 .card-img {
     background-color: rgba(76, 76, 77, 0.5);
-    width: 210px;
-    height: 100px;
+    margin: 0;
+    width: 58vw;
+    height: 15vh;
+    max-height: 250px;
+    max-width: 360px;
     position: absolute; /* Cambiar a absolute */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta posición */
+    top: 28%; /* Centra verticalmente */
+    left: 5%; /* Centra horizontalmente */
+    transform: translateY(-60%); /* Ajusta posición */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    z-index: 5; /* Asegura que el texto esté por encima de las imágenes */
+    z-index: 5;
 }
 
 h3 {
     color: #47716F;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    font-size: 22px;
+    font-size: clamp(16px, 2vw ,22px);
     font-weight: bold;
-}
-
-.h3-proyectos {
-    font-size: 20px;
+    margin: 0 5vw;
 }
 
 .p-index {
     color: white;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-    font-size: 12px;
-}
-
-.p-index-proyectos {
-    font-size: 10px;
-}
-
-.carousel {
-    height: 100vh; /* Altura del carrusel al 100% de la ventana */
-    /*margin-top: 80px;*/ /* Ajusta este margen para evitar el solapamiento con el menú */
-    margin-top: -80px; 
-}
-
-.carousel-item {
-    height: 100vh; /* Asegura que cada item del carrusel tenga 100% de altura */
-}
-
-.carousel-item img {
-    object-fit: contain; /* La imagen cubre el área */
-    width: 100%; /* Ocupa el ancho del contenedor */
-    height: 100%; /* Ocupa la altura del contenedor */
+    font-size: clamp(12px, 2vw, 16px);
+    margin: 0 5vw;
 }
 
 .hr-section {
     border: none; /* Elimina el borde predeterminado */
     height: 1px; /* Define el grosor de la línea */
     background-color:#47716F; /* Color de la línea */
-    margin: -130px auto; /* Espacio superior e inferior */
+    /*margin: 1vh; /* Espacio superior e inferior */
     width: 50%; /* Ajusta el ancho de la línea */
     opacity: 0.7; /* Transparencia */
 }
-.hr-section-2 {
-    border: none; /* Elimina el borde predeterminado */
-    height: 1px; /* Define el grosor de la línea */
-    background-color:#47716F; /* Color de la línea */
-    margin: 20px auto; /* Espacio superior e inferior */
-    width: 50%; /* Ajusta el ancho de la línea */
-    opacity: 0.7; /* Transparencia */
-}
+/*.hr-section-2 {
+    border: none;
+    height: 1px;
+    background-color:#47716F;
+    margin: 20px auto;
+    width: 50%;
+    opacity: 0.7;
+}*/
 #nosotros {
-    margin: 130px 0px;
+    /*margin: 130px 0px;*/
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -228,273 +237,4 @@ p {
 span {
     color: #47716F;
     font-weight: bold;
-}
-
-/* Media Queries */
-@media (min-width: 1000px) {
-    .whatsapp-pc {
-        font-size: 60px;
-        visibility: visible;
-    }
-
-    .whatsapp-mobil {
-        visibility: hidden;
-    }
-
-    .contenedor-header {
-        height: 30px;
-    }
-
-    .texto-header {
-        font-size: 14px;
-        padding-top: 5px;
-    }
-
-    /* Menu Hamburguesa */
-    .hamburger .line {
-        display: none;
-    }
-
-    #menu {
-        display: none;
-    }
-    /* Fin Menu Hamburguesa */
-
-    .logo_servitek {
-        margin-left: 15px;
-        width: 150px;
-    }
-
-    .redes-sociales {
-        display: flex;
-        position: relative;
-        right: -390px;
-
-        letter-spacing: 10px;
-        color: #47716F;
-        font-size: 18px;
-    }
-
-    /* Menu PC */
-    #menu-pc {
-        display: block;
-    }
-    
-    .menu-pc-display {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100px;
-        position: fixed;
-        padding-top: 25px;
-        margin-top: 80px;
-        background-color: rgba(76, 76, 77, 0.5);
-        z-index: 100;
-    }
-
-    #menu-pc nav {
-        list-style-type: none;
-    }
-
-    #menu-pc nav a {
-        text-decoration: none;
-        color: white;
-        text-shadow: 2px 4px rgba(0, 0, 0, 0.7);
-        font-size: 22x;
-        padding: 18px;
-        transition: color 0.3s;
-        border-left: 2px solid #47716F;
-    }
-
-    #menu-pc nav a:hover {
-        color: #539893;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    /* Flexbox para alinear las tarjetas en fila (horizontal) */
-    #menu-pc nav {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap; /* Permite que las tarjetas se muevan a una nueva línea si no caben */
-        padding: 20px 0;
-    }
-    .card-img {
-        background-color: rgba(76, 76, 77, 0.5);
-        width: 350px;
-        height: 200px;
-        position: absolute; /* Cambiar a absolute */
-        top: 50%; /* Centra verticalmente */
-        left: 50%; /* Centra horizontalmente */
-        transform: translate(-50%, -50%); /* Ajusta posición */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        z-index: 5; /* Asegura que el texto esté por encima de las imágenes */
-    }
-    
-    h3 {
-        color: #47716F;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-    .h3-proyectos {
-        color: #47716F;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-
-    .p-index {
-        color: white;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-        font-size: 18px;
-    }
-    .p-index-proyectos {
-        color: white;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-        font-size: 18px;
-    }
-
-    .carousel {
-        height: 100vh; /* Altura del carrusel al 100% de la ventana */
-        margin-top: 80px; /* Ajusta este margen para evitar el solapamiento con el menú */
-       
-    }
-    
-    .carousel-item {
-        height: 100vh; /* Asegura que cada item del carrusel tenga 100% de altura */
-    }
-    
-    .carousel-item img {
-        object-fit: cover; /* La imagen cubre el área */
-        width: 100%; /* Ocupa el ancho del contenedor */
-        height: 100%; /* Ocupa la altura del contenedor */
-    }
-    
-}
-@media (min-width: 768px) and (max-width: 999px) {
-    .card-img {
-        background-color: rgba(76, 76, 77, 0.5);
-        width: 350px;
-        height: 150px;
-        position: absolute; /* Cambiar a absolute */
-        top: 50%; /* Centra verticalmente */
-        left: 50%; /* Centra horizontalmente */
-        transform: translate(-50%, -50%); /* Ajusta posición */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        z-index: 5; /* Asegura que el texto esté por encima de las imágenes */
-    }
-    
-    h3 {
-        color: #47716F;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-    .p-index {
-        color: white;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-        font-size: 16px;
-    }
-
-    .carousel {
-        height: 100vh; /* Altura del carrusel al 100% de la ventana */
-        margin-top: 80px;/* Ajusta este margen para evitar el solapamiento con el menú */
-           }
-    
-    carousel-item {
-        height: 100vh; /* Asegura que cada item del carrusel tenga 100% de altura */
-    }
-    
-    .carousel-item img {
-        object-fit: cover; /* La imagen cubre el área */
-        width: 100%; /* Ocupa el ancho del contenedor */
-        height: 100%; /* Ocupa la altura del contenedor */
-    }
-}
-
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .whatsapp-pc {
-        font-size: 50px;
-        visibility: hidden;
-    }
-
-    .whatsapp-mobil {
-        visibility: visible;
-    }
-
-    .contenedor-header {
-        height: 30px;
-    }
-
-    .texto-header {
-        font-size: 12px;
-    }
-
-    #menu {
-        width: 100%;
-        height: 100%;
-        background-color: #539893;
-        margin-top: -9px;
-        transition: left 0.5s ease;
-    }
-
-    .card-img {
-        background-color: rgba(76, 76, 77, 0.5);
-        width: 350px;
-        height: 150px;
-        position: absolute; /* Cambiar a absolute */
-        top: 50%; /* Centra verticalmente */
-        left: 50%; /* Centra horizontalmente */
-        transform: translate(-50%, -50%); /* Ajusta posición */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        z-index: 5; /* Asegura que el texto esté por encima de las imágenes */
-    }
-    
-    h3 {
-        color: #47716F;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-    .p-index {
-        color: white;
-        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-        font-size: 16px;
-    }
-
-    .carousel {
-        height: 100vh; /* Altura del carrusel al 100% de la ventana */
-        margin-top: 80px;/* Ajusta este margen para evitar el solapamiento con el menú */
-        /*margin-top: -68px;*/ 
-    }
-    
-    .carousel-item {
-        height: 100vh; /* Asegura que cada item del carrusel tenga 100% de altura */
-    }
-    
-    .carousel-item img {
-        object-fit: cover; /* La imagen cubre el área */
-        width: 100%; /* Ocupa el ancho del contenedor */
-        height: 100%; /* Ocupa la altura del contenedor */
-    }
-    
 }
