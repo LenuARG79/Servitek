@@ -191,6 +191,46 @@ h3 {
     height: 100%; /* Ocupa la altura del contenedor */
 }
 
+.hr-section {
+    border: none; /* Elimina el borde predeterminado */
+    height: 1px; /* Define el grosor de la línea */
+    background-color:#47716F; /* Color de la línea */
+    margin: -130px auto; /* Espacio superior e inferior */
+    width: 50%; /* Ajusta el ancho de la línea */
+    opacity: 0.7; /* Transparencia */
+}
+.hr-section-2 {
+    border: none; /* Elimina el borde predeterminado */
+    height: 1px; /* Define el grosor de la línea */
+    background-color:#47716F; /* Color de la línea */
+    margin: 20px auto; /* Espacio superior e inferior */
+    width: 50%; /* Ajusta el ancho de la línea */
+    opacity: 0.7; /* Transparencia */
+}
+#nosotros {
+    margin: 130px 0px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin: 130px;
+}
+h2 {
+    font-size: 22px;
+    color: #47716F;
+}
+p {
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+
+}
+span {
+    color: #47716F;
+    font-weight: bold;
+}
+
 /* Media Queries */
 @media (min-width: 1000px) {
     .whatsapp-pc {
