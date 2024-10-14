@@ -47,12 +47,9 @@ header {
     font-size: clamp(10px, 2vw, 14px);
     margin-top: 2vh;
     margin: 0 5vw;
-    /*text-align: center;
-    align-items: center;*/
+    text-align: center;
+    align-items: center;
     font-weight: 500;
-    /*padding-top: 8px;
-    padding-right: 15px;
-    padding-left: 15px;*/
 }
 
 .contenedor-menu {
@@ -162,21 +159,33 @@ header {
     height: 100vh; 
 }*/
 
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Negro semitransparente */
+    z-index: 1;
+}
+
+
 .carousel-item img {
     object-fit: cover;
     width: 100%;
     height: auto;
 }
+
 .card-img {
-    background-color: rgba(76, 76, 77, 0.5);
     margin: 0;
     width: 58vw;
     height: 15vh;
-    max-height: 250px;
-    max-width: 360px;
-    position: absolute; /* Cambiar a absolute */
-    top: 28%; /* Centra verticalmente */
-    left: 5%; /* Centra horizontalmente */
+    /*max-height: 250px;
+    max-width: 365px;*/
+    position: absolute;
+    top: 35%; /* Centra verticalmente */
+    left: 3.5%; /* Centra horizontalmente */
     transform: translateY(-60%); /* Ajusta posición */
     display: flex;
     justify-content: center;
@@ -187,51 +196,159 @@ header {
 }
 
 h3 {
-    color: #47716F;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    font-size: clamp(16px, 2vw ,22px);
+    color:white;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-size: clamp(16px, 4vw ,26px);
     font-weight: bold;
     margin: 0 5vw;
 }
 
 .p-index {
     color: white;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-    font-size: clamp(12px, 2vw, 16px);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-size: clamp(12px, 2vw, 18px);
     margin: 0 5vw;
+    text-align: center;
 }
 
-.hr-section {
-    border: none; /* Elimina el borde predeterminado */
-    height: 1px; /* Define el grosor de la línea */
-    background-color:#47716F; /* Color de la línea */
-    /*margin: 1vh; /* Espacio superior e inferior */
-    width: 50%; /* Ajusta el ancho de la línea */
-    opacity: 0.7; /* Transparencia */
-}
 /* Fin Carrusel */
-/*.hr-section-2 {
+
+.contenedor-hr {
+    display: flex;
+    justify-content: center;
+}
+
+.hr-section-inicial {
     border: none;
     height: 1px;
     background-color:#47716F;
-    margin: 20px auto;
-    width: 50%;
+    /*margin: 3vh; /* Espacio superior e inferior */
+    width: 50%; 
     opacity: 0.7;
-}*/
+    margin-top: 19vh;
+}
+
+.hr-section {
+    border: none;
+    height: 1px;
+    background-color:#47716F;
+    margin: 3vh; /* Espacio superior e inferior */
+    width: 50%; 
+    opacity: 0.7;
+}
+
+.contenedor-presupuesto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h4-presupuesto {
+    color: #47716F;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: bold;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.p-presupuesto {
+    color: #47716F;
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+.a-aca {
+    text-decoration: none;
+    color: #47716F;
+    cursor: pointer;
+}
+
+.contenedor-proyecto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /*margin-left: 0.5rem;
+    margin-right: 1rem;*/
+
+}
+
+.contenedor-proyecto-img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.proyecto-card {
+    position: relative;
+    width: 300px; /* Ajusta el ancho según a las necesidades */
+    overflow: hidden;
+}
+
+.proyecto-card img {
+    width: 100%;
+    /*height: auto;*/
+    border-radius: 10px; /* Hace que las esquinas sean redondeadas */
+}
+
+.proyecto-texto {
+    position: absolute;
+    bottom: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 15px;
+    max-width: 268px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente negro */
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    box-sizing: border-box;
+    transition: background 0.3s ease-in-out;
+}
+
+.proyecto-texto p {
+    /*margin: 5px 0 0;*/
+    font-size: clamp(10px, 4vw, 14px);
+}
+
+.proyecto-card:hover .proyecto-texto {
+    background: rgba(0, 0, 0, 0.8); /* Oscurece el fondo al hacer hover */
+}
+
+.img-thumbnail {
+    margin: 0.5rem;
+    max-width: 280px;
+}
+
+/* Proyectos a medida */
+.img-a-medida {
+    background-image: url(/img/arquitectura_inteligente.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 80vw;
+    position: relative;
+}
+
+
+/* Pagina Nosotros */
+
 #nosotros {
-    padding-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-margin: 130px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /*scroll-margin: 130px;*/
 }
+
 h2 {
-    font-size: 22px;
+    font-size: clamp(20px, 4vw, 28px);
     color: #47716F;
 }
 p {
-    font-size: 13px;
+    font-size: clamp(12px, 4vw, 16px);
     text-align: center;
 
 }
