@@ -211,6 +211,10 @@ h3 {
     text-align: center;
 }
 
+.salon-img {
+    filter: brightness(0.8);
+}
+
 /* Fin Carrusel */
 
 .contenedor-hr {
@@ -239,20 +243,40 @@ h3 {
 
 .contenedor-presupuesto {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    /*flex-direction: column;*/
+}
+
+.img-presupuesto {
+    width: 80%;
+    height: auto;
+    max-width: 500px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-position: center;
+    background-size: contain;
+    border-radius: 0.5rem;
 }
 
 .h4-presupuesto {
+    width: 280px;
+    height: auto;
     color: #47716F;
     font-size: clamp(18px, 4vw, 26px);
     font-weight: bold;
     text-align: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    padding-bottom: 1rem;
+    /*margin-left: 3rem;
+    margin-right: 3rem;*/
 }
 
 .p-presupuesto {
+    width: 280px;
+    height: auto;
+    text-align: center;
     color: #47716F;
     font-size: clamp(14px, 3vw, 18px);
 }
@@ -267,9 +291,26 @@ h3 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /*margin-left: 0.5rem;
-    margin-right: 1rem;*/
+    margin-left: 0.5rem;
+    margin-right: 1rem;/
 
+}
+
+.h4-proyecto {
+    color: #47716F;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+    /*margin-left: 3rem;
+    margin-right: 3rem;*/
+}
+
+
+.p-proyecto {
+    text-align: center;
+    color: #47716F;
+    font-size: clamp(14px, 3vw, 18px);
 }
 
 .contenedor-proyecto-img {
@@ -299,7 +340,6 @@ h3 {
     left: 15px;
     max-width: 268px;
     background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente negro */
-    color: #fff;
     text-align: center;
     padding: 3px;
     box-sizing: border-box;
@@ -307,8 +347,9 @@ h3 {
 }
 
 .proyecto-texto p {
-    /*margin: 5px 0 0;*/
+    margin: 5px 0 0;
     font-size: clamp(10px, 4vw, 14px);
+    color: white;
 }
 
 .proyecto-card:hover .proyecto-texto {
@@ -321,15 +362,85 @@ h3 {
 }
 
 /* Proyectos a medida */
-.img-a-medida {
-    background-image: url(/img/arquitectura_inteligente.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100vw;
-    height: 80vw;
+
+.proyecto-a-medida-card {
     position: relative;
+    text-align: center;
 }
 
+.img-a-medida {
+    object-fit: contain;
+    width: 100vw;
+    height: auto;
+    filter: brightness(0.8);
+}
+
+.h4-a-medida {
+    position: absolute;
+    margin-left: 2%;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-size: clamp(16px, 4vw ,24px);
+    z-index: 1;
+
+}
+
+.p-a-medida{
+    position: absolute;
+    margin-left: 2%;
+    color:white;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    font-size: clamp(10px, 4vw ,16px);
+    z-index: 1;
+}
+.span-a-medida {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Mapa */
+
+.maps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.donde-estamos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /*margin-top: 1rem;*/
+}
+
+.donde-estamos h4 {
+    color: #47716F;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: bold;
+    text-align: center;
+}
+
+.donde-estamos li {
+    text-align: left;
+    color: #47716F;
+    font-size: clamp(14px, 3vw, 18px);
+    padding-bottom: 15px;
+}
+
+iframe {
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+    margin-right: 1rem;
+    width: 100%;
+}
 
 /* Pagina Nosotros */
 
@@ -355,4 +466,16 @@ p {
 span {
     color: #47716F;
     font-weight: bold;
+}
+
+/*Media queris */
+
+@media (min-width:768px) {
+    .whatsapp-mobil {
+        visibility: hidden;
+    }
+    .whatsapp-pc {
+        visibility:visible ;
+    }
+
 }
