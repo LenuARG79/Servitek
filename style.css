@@ -363,40 +363,45 @@ h3 {
 
 /* Proyectos a medida */
 
-.proyecto-a-medida-card {
-    position: relative;
-    text-align: center;
+.proyecto-a-medida-texto {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
 }
 
 .img-a-medida {
-    object-fit: contain;
-    width: 100vw;
+    width: 80%;
     height: auto;
-    filter: brightness(0.8);
+    max-width: 500px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-position: center;
+    background-size: contain;
+    border-radius: 0.5rem;
 }
 
 .h4-a-medida {
-    position: absolute;
-    margin-left: 2%;
-    color: white;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-    font-size: clamp(16px, 4vw ,24px);
-    z-index: 1;
+    width: 280px;
+    height: auto;
+    color: #47716F;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
 
 }
 
 .p-a-medida{
-    position: absolute;
-    margin-left: 2%;
-    color:white;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-    font-size: clamp(10px, 4vw ,16px);
-    z-index: 1;
+    width: 280px;
+    height: auto;
+    text-align: center;
+    color: #47716F;
+    font-size: clamp(14px, 3vw, 18px);
 }
 .span-a-medida {
-    color: white;
+    color:#47716F;
     font-weight: bold;
 }
 
