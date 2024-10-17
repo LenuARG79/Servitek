@@ -451,27 +451,34 @@ iframe {
 
 #nosotros {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
     /*scroll-margin: 130px;*/
 }
 
-h2 {
-    font-size: clamp(20px, 4vw, 28px);
-    color: #47716F;
+.img-nosotros {
+    object-fit: cover;
+    width: 100vw;
+    height: auto;
+    filter: brightness(0.5);
+    margin-top: 19vh;
+    position: relative;
 }
-p {
-    font-size: clamp(12px, 4vw, 16px);
-    text-align: center;
 
+.h2-nosotros {
+    font-size: clamp(20px, 4vw, 28px);
+    color: red;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
-span {
-    color: #47716F;
-    font-weight: bold;
-}
+
+.p-nosotros {
+    font-size: clamp(12px, 4vw, 16px);
+    text-align: justify;
+    justify-items: center;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}   
 
 footer {
     background-color: #47716F;
@@ -494,6 +501,12 @@ footer {
     color: white;
     padding-top: 1rem;
     font-size: clamp(12px, 2vw, 16px);
+}
+
+.footer-ubicacion p {
+    font-size: 14px; 
+    padding-top: 0.5rem;
+    text-transform: lowercase;
 }
 
 .footer-contactos {
@@ -534,9 +547,10 @@ footer {
     text-decoration: none;
 }
 
-.fa-brands {
+.fa-seguinos {
     color: white;
     font-size: clamp(16px, 2vw, 18px);
+    margin-bottom: 0.7rem;
 }
 
 
