@@ -217,6 +217,7 @@ h3 {
 
 /* Fin Carrusel */
 
+/* Linea Divisoria */
 .contenedor-hr {
     display: flex;
     justify-content: center;
@@ -240,7 +241,9 @@ h3 {
     width: 50%; 
     opacity: 0.7;
 }
+/* Fin Linea Divisoria */
 
+/* Index Presupuesto */
 .contenedor-presupuesto {
     display: flex;
     justify-content: space-evenly;
@@ -286,7 +289,9 @@ h3 {
     color: #47716F;
     cursor: pointer;
 }
+/* Index Presupuesto */
 
+/* Index Proyecto */
 .contenedor-proyecto {
     display: flex;
     justify-content: center;
@@ -361,8 +366,7 @@ h3 {
     max-width: 280px;
 }
 
-/* Proyectos a medida */
-
+/* Index Proyectos a medida */
 .proyecto-a-medida-texto {
     display: flex;
     justify-content: space-evenly;
@@ -407,7 +411,6 @@ h3 {
 
 
 /* Mapa */
-
 .maps {
     display: flex;
     flex-direction: row;
@@ -449,36 +452,87 @@ iframe {
 
 /* Pagina Nosotros */
 
-#nosotros {
+.contenedor-nosotros {
     display: flex;
     justify-content: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    /*scroll-margin: 130px;*/
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
 }
 
 .img-nosotros {
-    object-fit: cover;
+    background-image: url(img/nosotros.webp);
     width: 100vw;
-    height: auto;
+    height: 100vh;
     filter: brightness(0.5);
-    margin-top: 19vh;
-    position: relative;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
 }
 
 .h2-nosotros {
-    font-size: clamp(20px, 4vw, 28px);
-    color: red;
+    font-size: clamp(16px, 4vw, 24px);
+    color: white;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    padding-top: 22vh;
+    text-align: center;
+
 }
 
 .p-nosotros {
-    font-size: clamp(12px, 4vw, 16px);
-    text-align: justify;
-    justify-items: center;
-    color: red;
+    font-size: clamp(12px, 4vw, 18px);
+    color: white;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-}   
+    text-align: justify;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 900px;
+}
+
+/*Nosotros Proyectos*/
+
+.contenedor-nosotros-proyectos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-nosotros-proyectos {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.5rem;
+}
+
+.h2-nosotros-proyectos {
+    width: 280px;
+    height: auto;
+    color: #47716F;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.p-nosotros-proyectos {
+    width: 280px;
+    height: auto;
+    max-height: 400px;
+    text-align: center;
+    color: #47716F;
+    font-size: clamp(14px, 3vw, 18px);
+
+}
+
+/* Fin página Nosotros */
+
+/*Footer*/
 
 footer {
     background-color: #47716F;
